@@ -14,13 +14,13 @@ public class Singleton {
     private static Singleton instance;
     
     private Singleton(){
-        this.instance = new Singleton();
         // here should be the connection to the database
     }
     
     public static Singleton getInstance(){
         if (instance == null)
             instance = new Singleton();
+        // here could a thread lock come
         return instance;
     }
     
